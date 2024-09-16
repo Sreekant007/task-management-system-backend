@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "622f8e63-89a8-4028-b6b8-2c8ab8ab5790",
+		"name": "TaskManagment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28594542",
+		"_collection_link": "https://retail-hub-apis.postman.co/workspace/ChatApp~0392c4e1-f192-4679-b59b-b09742245f30/collection/28594542-622f8e63-89a8-4028-b6b8-2c8ab8ab5790?action=share&source=collection_link&creator=28594542"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Get All Task",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Task updated Once\",\n    \"description\": \"kjsdghfcviusdhjhfiksj\",\n    \"dueDate\": \"2023-08-09\",\n    \"status\": \"0\",\n    \"userId\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/task/update?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/task?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"task"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "pageNum",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"ss\",\n    \"lastName\":\"Govande\",\n    \"email\":\"govandeshrikants130@gmail.com\",\n    \"password\":\"sreekant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/registration"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\":\"ss\",\n    \"lastName\":\"Govande\",\n    \"email\":\"govandeshrikants130@gmail.com\",\n    \"password\":\"sreekant\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/registration"
+			},
+			"response": []
+		}
+	]
+}
